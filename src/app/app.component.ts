@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MapChart } from 'angular-highcharts';
 import { HttpClient } from '@angular/common/http';
+import { PkGeoJSON } from './pkmap';
 
 declare var require: any;
 
@@ -15,12 +16,10 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    const pkMapData = require('@highcharts/map-collection/countries/pk/pk-all.geo.json');
-    this.draw(pkMapData);
+    this.draw(PkGeoJSON);
   }
 
   draw(pkMapData) {
-    console.log('pkMapData', pkMapData);
     const data: any = [
       ['pk-sd', 0],
       ['pk-ba', 1],
@@ -29,7 +28,8 @@ export class AppComponent implements OnInit {
       ['pk-nw', 4],
       ['pk-ta', 5],
       ['pk-is', 6],
-      ['pk-pb', 7]
+      ['pk-pb', 7],
+      ['pk-ok', 3]
     ];
     const series: any = [
       {
@@ -51,10 +51,10 @@ export class AppComponent implements OnInit {
         map: pkMapData,
       },
       title: {
-        text: 'Highmaps basic demo'
+        text: 'Pakistan'
       },
       subtitle: {
-        text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/pk/pk-all.js">Pakistan</a>'
+        text: 'Novel COVID-19 <a href="http://code.highcharts.com/mapdata/countries/pk/pk-all.js">Pakistan</a>'
       },
       mapNavigation: {
         enabled: true,
