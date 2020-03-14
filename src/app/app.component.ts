@@ -108,7 +108,8 @@ export class AppComponent implements OnInit {
           shadow: false,
           center: ['50%', '50%'],
           size: '45%',
-          innerSize: '20%'
+          innerSize: '20%',
+          colors: ['#2f7ed8', '#27ae60', '#27ae60']
         }
       },
       series: [{
