@@ -113,7 +113,7 @@ export class AppComponent implements OnInit {
       },
       series: [{
         type: 'pie',
-        name: 'Browser share',
+        name: 'Confirmed Cases',
         data: [
           ['Still Admitted', 25],
           ['Discharged', 3],
@@ -149,7 +149,7 @@ export class AppComponent implements OnInit {
       },
       series: [{
         type: 'pie',
-        name: 'Browser share',
+        name: 'Hospital Updates',
         data: [
           ['ICT', 3],
           ['Punjab', 0],
