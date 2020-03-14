@@ -1854,8 +1854,8 @@ export const PkGeoJSON = {
       "id":"PK.OK",
       "properties":{
          "hc-group":"admin1",
-         "hc-middle-x":4.44,
-         "hc-middle-y":1.85,
+         "hc-middle-x":5.14,
+         "hc-middle-y":1.50,
          "hc-key":"pk-ok",
          "hc-a2":"OK",
          "labelrank":"3",

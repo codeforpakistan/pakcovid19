@@ -3,5 +3,6 @@
 }
 
 .highcharts-key-pk-ok {
-  transform: scale(1.95) translate(71px, 56px) rotate(-5.2deg) !important
+  position: relative;
+  transform: scale(1.95) translate(0%, 8.5%) rotate(-5.2deg) !important
 }
