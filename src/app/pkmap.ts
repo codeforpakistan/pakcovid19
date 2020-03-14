@@ -564,7 +564,7 @@ export const PkGeoJSON = {
            "hc-a2":"BA",
            "labelrank":"3",
            "hasc":"PK.BA",
-           "alt-name":"Balochistan|BéloutchistanBeluchistan|Baluchistão",
+           "alt-name":"Balochistan|BélotchistanBelochistan|Balochistão",
            "woe-id":"2346496",
            "subregion":null,
            "fips":"PK02",
