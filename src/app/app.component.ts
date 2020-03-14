@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MapChart } from 'angular-highcharts';
+import { MapChart, Chart } from 'angular-highcharts';
 import { HttpClient } from '@angular/common/http';
+import * as Highcharts from 'highcharts';
+
 
 declare var require: any;
 
@@ -12,13 +14,85 @@ declare var require: any;
 export class AppComponent implements OnInit {
   title = 'pak-covid19-client';
   map: MapChart = null;
+  pchart: Chart = null;
+  tchart: Chart = null;
   constructor(private http: HttpClient) { }
-
+  
   ngOnInit() {
     const pkMapData = require('@highcharts/map-collection/countries/pk/pk-all.geo.json');
     this.draw(pkMapData);
+    this.generateProvinceStatsDonut();
+    this.generateTrovinceStatsDonut();
   }
 
+  generateTrovinceStatsDonut() {
+    this.tchart = new Chart({
+      chart: {
+        plotBorderWidth: null,
+        plotShadow: false
+      },
+      title: {
+        text: 'Outcomes'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.y}</b>'
+      },
+      plotOptions: {
+        pie: {
+          shadow: false,
+          center: ['50%', '50%'],
+          size: '45%',
+          innerSize: '20%'
+        }
+      },
+      series: [{
+        type: 'pie',
+        name: 'Browser share',
+        data: [
+          ['Samples Tested', 609],
+          ['Negative', 581],
+          ['Positive', 27],
+  
+        ]
+      }]
+    });
+  }
+  
+  generateProvinceStatsDonut() {
+    this.pchart = new Chart({
+      chart: {
+        plotBorderWidth: null,
+        plotShadow: false
+      },
+      title: {
+        text: 'Infection State'
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.y}</b>'
+      },
+      plotOptions: {
+        pie: {
+          shadow: false,
+          center: ['50%', '50%'],
+          size: '45%',
+          innerSize: '20%'
+        }
+      },
+      series: [{
+        type: 'pie',
+        name: 'Browser share',
+        data: [
+          ['Islamabad', 1.0],
+          ['Punjab', 0],
+          ['Khyber Pakhtunkhwa', 0],
+          ['Balochistan', 6],
+          ['Azad Jammu and Kashmir', 0],
+          ['Gilgit Baltistan', 31]
+        ]
+      }]
+    });
+  }
+  
   draw(pkMapData) {
     console.log('pkMapData', pkMapData);
     const data: any = [
@@ -68,5 +142,5 @@ export class AppComponent implements OnInit {
       series
     });
   }
-
+  
 }
