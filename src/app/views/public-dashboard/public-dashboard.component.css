@@ -1,18 +1,20 @@
 .chart-dimensions {
-  height: 75vh; 
+  position: relative;
+  height: 650px;
   min-width: 310px; 
-  max-width: 1220px; 
-  width: 1220px;
+  max-width: 780px; 
+  width: 780px;
   margin: 0 auto;
-  overflow-x: scroll;
 }
-
 
 .bg-deep-koamaru {
   background-color: #2B3A67;
 }
 
-
 .bg-desire {
   background-color: #E84855;
+}
+
+tr {
+  line-height: 10px;
 }

@@ -1,8 +1,8 @@
 .container {
-  max-width: 95% !important;
+  max-width: 98% !important;
 }
 
 .highcharts-key-pk-ok {
   position: relative;
-  transform: scale(1.95) translate(8%, 7.8%) rotate(-5.2deg) !important
+  transform: scale(1.85) translate(8.8%, 8.7%) rotate(-5.2deg) !important
 }

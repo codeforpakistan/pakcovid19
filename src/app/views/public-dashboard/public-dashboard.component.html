@@ -5,7 +5,7 @@
   <div class="row">
     <div class="col-md-3">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-right: 3px;">
           <div class="card text-white bg-desire mb-3 text-center">
             <div class="card-header">Total Cases</div>
             <div class="card-body">
@@ -13,7 +13,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="padding-left: 0px;">
           <div class="card text-white bg-deep-koamaru mb-3 text-center">
             <div class="card-header">Last Updated</div>
             <div class="card-body">
@@ -22,144 +22,109 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <table class="table table-striped">
-          <thead>
-            <th>
-              Confirmed cases by Province
-            </th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ICT</td>
-              <td>4</td>
-            </tr>
-            <tr>
-              <td>Punjab</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Sindh</td>
-              <td>18</td>
-            </tr>
-            <tr>
-              <td>KP</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>KPTD</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Balochistan</td>
-              <td>6</td>
-            </tr>
-            <tr>
-              <td>AJK</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>GB</td>
-              <td>3</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table style="font-size: 0.9rem;" class="table table-striped">
+        <thead>
+          <th>
+            Confirmed cases by Province
+          </th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ICT</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Punjab</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Sindh</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>KP</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>KPTD</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>Balochistan</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>AJK</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>GB</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <div class="col-md-6">
-      <div class="row">
-        <div class="chart-dimensions" [chart]="map"></div>
-      </div>
+      <div class="chart-dimensions" [chart]="map"></div>
     </div>
     <div class="col-md-3">
-      <div class="row">
-        <div class="col-md-6">
-          <table class="table table-striped">
+        <div>
+          <table style="font-size: 0.9rem;" class="table table-striped">
             <thead>
               <th>
-                Deaths by Province
+              </th>
+              <th>
+                Deaths
+              </th>
+              <th>
+                Recoveries
               </th>
             </thead>
             <tbody>
               <tr>
                 <td>ICT</td>
                 <td>0</td>
-              </tr>
-              <tr>
-                <td>Punjab</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>Sindh</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>KP</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>KPTD</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>Balochistan</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>AJK</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>GB</td>
-                <td>0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-6">
-          <table class="table table-striped">
-            <thead>
-              <th>
-                Recoveries by Province
-              </th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>ICT</td>
                 <td>0</td>
               </tr>
               <tr>
                 <td>Punjab</td>
                 <td>0</td>
+                <td>0</td>
               </tr>
               <tr>
                 <td>Sindh</td>
+                <td>0</td>
                 <td>3</td>
               </tr>
               <tr>
                 <td>KP</td>
                 <td>0</td>
+                <td>0</td>
               </tr>
               <tr>
                 <td>KPTD</td>
+                <td>0</td>
                 <td>0</td>
               </tr>
               <tr>
                 <td>Balochistan</td>
                 <td>0</td>
+                <td>0</td>
               </tr>
               <tr>
                 <td>AJK</td>
+                <td>0</td>
                 <td>0</td>
               </tr>
               <tr>
                 <td>GB</td>
                 <td>0</td>
+                <td>0</td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
       <div class="row">
           <div class="col-sm">
             <div [chart]="linechart" class="mt-4"></div>
