@@ -177,13 +177,13 @@ export class PublicDashboardComponent implements OnInit {
 
   drawMap(pkMapData) {
     const data: any = [
-      ['pk-sd', 16],
+      ['pk-sd', 18],
       ['pk-ba', 6],
       ['pk-jk', 0],
       ['pk-na', 3],
       ['pk-nw', 0],
       ['pk-ta', 0],
-      ['pk-is', 3],
+      ['pk-is', 4],
       ['pk-pb', 0],
       ['pk-ok', 0]
     ];
