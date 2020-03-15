@@ -1,36 +1,173 @@
-<div class="container mt-4">
+<div class="container">
+  <div class="row text-center">
+    <h1 class="display-3 text-center">COVID19 Cases in Pakistan</h1>
+  </div>
   <div class="row">
+    <div class="col-md-3">
+      <div class="row">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title text-center mb-0">Total Confirmed: 31</h5>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <p>Confirmed Cases by Province</p>
+        <table class="table table-dark">
+          <tbody>
+            <tr>
+              <td>ICT</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Punjab</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Sindh</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>KP</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>KPTD</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Balochistan</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>AJK</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>GB</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <h4 class="text-center">14th March 2019</h4>
+      </div>
+    </div>
     <div class="col-md-6">
       <div class="row">
-        <div class="col-sm">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-0">Total Infected: 28</h5>
+        <div class="chart-dimensions" [chart]="map"></div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="row">
+        <div class="col-md-6" style="padding-right: 2px;">
+          <p>Deaths by Province</p>
+          <table class="table table-dark">
+            <tbody>
+              <tr>
+                <td>ICT</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Punjab</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Sindh</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>KP</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>KPTD</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Balochistan</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>AJK</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>GB</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6" style="padding-left: 2px;">
+          <p>Recoveries by Province</p>
+          <table class="table table-dark">
+            <tbody>
+              <tr>
+                <td>ICT</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Punjab</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Sindh</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>KP</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>KPTD</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Balochistan</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>AJK</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>GB</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title text-center mb-0">March 15th 2020</h5>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-sm">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body">
-              <h5 class="card-title text-center mb-0">March 14th 2020</h5>
-            </div>
+        <div class="row">
+          <div class="col-sm">
+            <div [chart]="pchart" class="mt-4"></div>
+          </div>
+          <div class="col-sm">
+            <div [chart]="tchart" class="mt-4"></div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm">
-          <div [chart]="pchart" class="mt-4"></div>
-        </div>
-        <div class="col-sm">
-          <div [chart]="tchart" class="mt-4"></div>
+        <div class="row">
+          <div [chart]="barChart" class="mt-4"></div>
         </div>
       </div>
-      <div class="row">
-        <div [chart]="barChart" class="mt-4"></div>
+      <div class="col-md-6" >
       </div>
-    </div>
-    <div class="col-md-6" style="position: relative;">
-      <div class="chart-dimensions" [chart]="map"></div>
-    </div>
+    </div> -->
   </div>
 </div>
