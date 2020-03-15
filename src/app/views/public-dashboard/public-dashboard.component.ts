@@ -15,7 +15,7 @@ export class PublicDashboardComponent implements OnInit {
   map: MapChart = null;
   pchart: Chart = null;
   tchart: Chart = null;
-  barChart: Chart = null;
+  linechart: Chart = null;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -23,71 +23,76 @@ export class PublicDashboardComponent implements OnInit {
     // const pkMapData = require('@highcharts/map-collection/countries/pk/pk-all.geo.json');
     this.generateProvinceStatsDonut();
     this.generateTrovinceStatsDonut();
-    // this.generateStackedBarChart();
+    this.generateLineGraph();
   }
 
-  generateStackedBarChart() {
-    // this.barChart = new Chart({
-    //   chart: {
-    //     type: 'column'
-    //   },
-    //   title: {
-    //     text: 'Stacked column chart'
-    //   },
-    //   xAxis: {
-    //     categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
-    //   },
-    //   yAxis: {
-    //     min: 0,
-    //     title: {
-    //       text: 'Total fruit consumption'
-    //     },
-    //     stackLabels: {
-    //       enabled: true,
-    //       style: {
-    //         fontWeight: 'bold',
-    //         color: ( // theme
-    //           Highcharts.defaultOptions.title.style &&
-    //           Highcharts.defaultOptions.title.style.color
-    //         ) || 'gray'
-    //       }
-    //     }
-    //   },
-    //   legend: {
-    //     align: 'right',
-    //     x: -30,
-    //     verticalAlign: 'top',
-    //     y: 25,
-    //     floating: true,
-    //     backgroundColor:
-    //       Highcharts.defaultOptions.legend.backgroundColor || 'white',
-    //     borderColor: '#CCC',
-    //     borderWidth: 1,
-    //     shadow: false
-    //   },
-    //   tooltip: {
-    //     headerFormat: '<b>{point.x}</b><br/>',
-    //     pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-    //   },
-    //   plotOptions: {
-    //     column: {
-    //       stacking: 'normal',
-    //       dataLabels: {
-    //         enabled: true
-    //       }
-    //     }
-    //   },
-    //   series: [{
-    //     name: 'John',
-    //     data: [5, 3, 4, 7, 2]
-    //   }, {
-    //     name: 'Jane',
-    //     data: [2, 2, 3, 2, 1]
-    //   }, {
-    //     name: 'Joe',
-    //     data: [3, 4, 4, 2, 5]
-    //   }]
-    // });
+  generateLineGraph() {
+    this.linechart = new Chart({
+
+      title: {
+        text: 'Cases Timeline'
+      },
+
+      subtitle: {
+        text: ''
+      },
+
+      yAxis: {
+        title: {
+          text: 'Number of Positive cases'
+        }
+      },
+
+      xAxis: {
+        accessibility: {
+          rangeDescription: 'Range: March 2020'
+        }
+      },
+
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+      },
+
+      // plotOptions: {
+      //   series: {
+      //     label: {
+      //       connectorAllowed: false
+      //     },
+      //     pointStart: 2010
+      //   }
+      // },
+
+      // plotOptions: {
+      //   series: {
+      //     pointStart: Date.UTC(2020, 3, 7),
+      //     pointInterval: 3600 * 1000
+      //   }
+      // },
+
+      series: [{
+        name: 'Positive Cases',
+        type: 'line',
+        data: [6, 7, 16, 19, 20, 21, 28, 31]
+      }],
+
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 500
+          },
+          chartOptions: {
+            legend: {
+              layout: 'horizontal',
+              align: 'center',
+              verticalAlign: 'bottom'
+            }
+          }
+        }]
+      }
+
+    });
   }
 
   generateTrovinceStatsDonut() {
