@@ -26,35 +26,35 @@ export class PublicDashboardComponent implements OnInit {
     this.generateLineGraph();
   }
 
+  generateDates() {
+    const startDate = new Date('2020-03-07');
+  }
+
   generateLineGraph() {
     this.linechart = new Chart({
-
       title: {
         text: 'Cases Timeline'
       },
-
       subtitle: {
         text: ''
       },
-
       yAxis: {
         title: {
           text: 'Number of Positive cases'
         }
       },
-
       xAxis: {
+        // type: 'datetime',
+        categories: ['07/03/2020', '09/03/2020', '10/03/2020', '11/03/2020', '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020'],
         accessibility: {
           rangeDescription: 'Range: March 2020'
-        }
+        },
       },
-
       legend: {
         layout: 'vertical',
         align: 'right',
         verticalAlign: 'middle'
       },
-
       // plotOptions: {
       //   series: {
       //     label: {
@@ -76,7 +76,9 @@ export class PublicDashboardComponent implements OnInit {
         type: 'line',
         data: [6, 7, 16, 19, 20, 21, 28, 31]
       }],
-
+      credits: {
+        enabled: false
+      },
       responsive: {
         rules: [{
           condition: {
