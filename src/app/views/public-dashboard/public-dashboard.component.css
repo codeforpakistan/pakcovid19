@@ -1,0 +1,8 @@
+.chart-dimensions {
+  height: 75vh; 
+  min-width: 310px; 
+  max-width: 1220px; 
+  width: 1220px;
+  margin: 0 auto;
+  overflow-x: scroll;
+}

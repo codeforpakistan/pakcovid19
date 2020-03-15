@@ -8,10 +8,14 @@ import { ChartModule, HIGHCHARTS_MODULES } from 'angular-highcharts';
 import * as more from 'highcharts/highcharts-more.src';
 import * as exporting from 'highcharts/modules/exporting.src';
 import * as highmaps from 'highcharts/modules/map.src';
+import { PublicDashboardComponent } from './views/public-dashboard/public-dashboard.component';
+import { WorldDashboardComponent } from './views/world-dashboard/world-dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PublicDashboardComponent,
+    WorldDashboardComponent
   ],
   imports: [
     BrowserModule,
