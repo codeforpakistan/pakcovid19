@@ -45,9 +45,11 @@ export class PublicDashboardComponent implements OnInit {
       },
       xAxis: {
         // type: 'datetime',
-        categories: ['07/03/2020', '09/03/2020', '10/03/2020', '11/03/2020', '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020'],
+        categories: ['07/03/2020', '09/03/2020', '10/03/2020', '11/03/2020', 
+                      '12/03/2020', '13/03/2020', '14/03/2020', '15/03/2020',
+                      '16/03/2020'],
         accessibility: {
-          rangeDescription: 'Range: March 2020'
+          rangeDescription: 'Range: 2020'
         },
       },
       legend: {
@@ -74,7 +76,7 @@ export class PublicDashboardComponent implements OnInit {
       series: [{
         name: 'Positive Cases',
         type: 'line',
-        data: [6, 7, 16, 19, 20, 21, 28, 31]
+        data: [6, 7, 16, 19, 20, 21, 28, 31, 53]
       }],
       credits: {
         enabled: false
@@ -122,7 +124,7 @@ export class PublicDashboardComponent implements OnInit {
         type: 'pie',
         name: 'Hospital Updates',
         data: [
-          ['Still Admitted', 25],
+          ['Still Admitted', 50],
           ['Discharged', 3],
           ['Expired', 0],
         ]
@@ -158,14 +160,15 @@ export class PublicDashboardComponent implements OnInit {
         type: 'pie',
         name: 'Confirmed Cases',
         data: [
-          ['ICT', 3],
-          ['Punjab', 0],
-          ['Sindh', 16],
+          ['ICT', 4],
+          ['Punjab', 1],
+          ['Sindh', 34],
           ['KP', 0],
           ['KPTD', 0],
-          ['Balochistan', 6],
+          ['Balochistan', 5],
           ['AJK', 0],
-          ['GB', 3]
+          ['GB', 3],
+          ['Mobile Lab Taftan', 6]
         ]
       }],
       credits: {
@@ -177,14 +180,14 @@ export class PublicDashboardComponent implements OnInit {
 
   drawMap(pkMapData) {
     const data: any = [
-      ['pk-sd', 18],
+      ['pk-sd', 34],
       ['pk-ba', 6],
       ['pk-jk', 0],
       ['pk-na', 3],
       ['pk-nw', 0],
       ['pk-ta', 0],
       ['pk-is', 4],
-      ['pk-pb', 0],
+      ['pk-pb', 1],
       ['pk-ok', 0]
     ];
     const series: any = [
